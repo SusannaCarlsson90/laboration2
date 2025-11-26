@@ -19,11 +19,56 @@ body {
   box-shadow: 0 0 15px rgba(240, 200, 180, 0.3);
   border-radius: 15px;
 padding: 1em;
+
 }
 
 
 
 /*HUVUDMENY*/
+
+.logo {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+
+}
+
+.main-header {
+  background: url("../assets/headerdesktopkomp.webp");
+  background-size: cover; /*fyll hela ytan*/
+  background-position: center; /*centrerar bilden*/
+  height: 50vh;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@supports not (background-image: url("../assets/headerdesktopkomp.webp")) {
+  .main-header {
+    background-image: url("../assets/headerdesktopkomp.jpg");
+  }
+}
+
+.main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
+  pointer-events: none; /* menyerna fungerar fortfarande */
+}
+
+.main-header > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
 .main-header nav ul {
   margin: 0;
   padding: 0;
@@ -57,10 +102,13 @@ padding: 1em;
 .main-header h1 {
   font-size: 3em;
   text-align: center;
+  color: #f9f5e8;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.7);
 }
 
 .main-header p {
   text-align: center;
+  color: #f9f5e8;
 }
 
 /*STARTSIDA*/
@@ -100,9 +148,11 @@ height: 300px;
 
 .redigeradebilder figcaption {
   grid-column: 1/span2;
-  max-width: 400px;
+  max-width: 800px;
   
 }
+
+
 
 .redigeradebilder img {
   height: 300px;
@@ -144,6 +194,16 @@ height: 300px;
 /*MEDIA QUERY*/
 
 @media(max-width: 900px) {
+  .main-header {
+    background-image: url("../assets/headertabletkomp.webp");
+    padding: 2rem 1rem;
+  }
+
+  @supports not (background-image: url("../assets/headertabletkomp.webp")) {
+    .main-header {
+      background-image: url("../assets/headertabletkomp.jpg");
+    } }
+
   .main-header h1 {
     font-size: 2em;
     text-align: center;
@@ -152,26 +212,68 @@ height: 300px;
   .main-header p {
     text-align: center;
   }
-}
+} 
 @media(max-width: 767px) {
 body {
   font-size: 1em;
   padding-bottom: 80px;
 }
+
+.main-header {
+  background-image: url("../assets/headermobilkomp.webp");
+  padding: 2rem 1rem;
+  height: auto;
+}
+
+@supports not (background-image: url("../assets/headermobilkomp.webp")) {
+  .main-header {
+    background-image: url("../assets/headermobilkomp.jpg");
+    position: relative;
+    text-align: center;
+  } }
+
   .main-header nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    background-color: #f0d8c8;
+    white-space: nowrap;
+    z-index: 10;
   }
 
   .main-header nav ul {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.3em;
+    justify-content: space-evenly;
+    padding: 0 0.3em;
   }
+
+  .main-header nav li {
+    flex: 1;
+    
+  }
+
+  .main-header nav li a {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #f0d8c8; /* samma färg som nav */
+    color: #3b2f2f;
+   
+  }
+
+  .main-header nav li a:hover {
+    background-color: #e5bfa6;
+  }
+
+  .main-header nav li.current a {
+    background-color: #d8a47f;
+    color: #fffaf7;
+  }
+
 
   .main-header h1 {
     font-size: 1em;
@@ -182,16 +284,47 @@ body {
     text-align: center;
     font-size: 0.5em;
   }
+  .logo {
+    display: block;
+    margin: 1rem auto 0 auto; /* centrerar horisontellt */
+    width: 50px;            
+    height: auto;
+  }
 
   .bildserie {
     grid-template-columns: 1fr;
     justify-items: center;
-    
+  }
+  .redigeradebilder figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     
   }
 
-  .bildserie img {
-   
-   
+  .redigeradebilder figure img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .redigeradebilder figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 400px;
+  }
+ 
+  h2 {
+    text-align: center;
+  }
+
+  .about figure {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .about img {
+    width: 250px;
   }
 }
