@@ -255,13 +255,14 @@ body {
     background-image: url("../assets/headermobilkomp.jpg");
     position: relative;
     text-align: center;
+    width: auto;
   } }
 
   .main-header nav {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     background-color: #f0d8c8;
     white-space: nowrap;
     z-index: 10;
@@ -331,6 +332,13 @@ body {
     width: 90%;
     max-width: 400px;
     height: auto;
+  }
+  .kossan {
+    width: 100%;
+    height: auto;
+    max-width: 330px; 
+    display: block;
+    margin: 0 auto; /* centrerar bilden */
   }
 
   .redigeradebilder figcaption {
