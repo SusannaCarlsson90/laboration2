@@ -130,7 +130,7 @@ padding: 1em;
 }
 
 .bildserie img {
-height: 300px;
+height: 500px;
   width: auto;
   border-radius: 20px;
   display: block;
@@ -162,7 +162,7 @@ height: 300px;
 
 
 .redigeradebilder img {
-  height: 300px;
+  height: 600px;
   width: auto;
   object-fit: cover;
   border-radius: 20px;
@@ -228,6 +228,15 @@ height: 300px;
     margin-top: 6.7rem;  
     z-index: 3;
   }
+  .bildserie img {
+    height: 350px;  
+  }
+
+  
+  .redigeradebilder img {
+    height: 350px; 
+  }
+   
 } 
 @media(max-width: 767px) {
 body {
