@@ -69,6 +69,7 @@ padding: 1em;
 
 
 
+
 .main-header nav ul {
   margin: 0;
   padding: 0;
@@ -97,6 +98,12 @@ padding: 1em;
 
 .main-header nav li a:hover {
   background-color: #e5bfa6;
+}
+
+.main-header nav {
+  position: relative;
+  margin-top: 3rem;  
+  z-index: 3;
 }
 
 .main-header h1 {
@@ -193,10 +200,13 @@ height: 300px;
 
 /*MEDIA QUERY*/
 
-@media(max-width: 900px) {
+
+
+@media(max-width: 1024px) {
   .main-header {
     background-image: url("../assets/headertabletkomp.webp");
     padding: 2rem 1rem;
+    
   }
 
   @supports not (background-image: url("../assets/headertabletkomp.webp")) {
@@ -211,6 +221,12 @@ height: 300px;
   
   .main-header p {
     text-align: center;
+  }
+
+  .main-header nav {
+    position: relative;
+    margin-top: 6.7rem;  
+    z-index: 3;
   }
 } 
 @media(max-width: 767px) {
