@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+  background-color: #f3e6de;
+  font-family: "Zalando Sans SemiExpanded", sans-serif; /*text från google fonts*/
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1.7em;
+ }
+
+ .container {
+  margin: 0 auto;
+ }
+
+ main {
+  background-color: #f9f3ee; 
+  border: 1px solid #e3cbb8;
+  box-shadow: 0 0 15px rgba(240, 200, 180, 0.3);
+  border-radius: 15px;
+padding: 1em;
+}
+
+
+
+/*HUVUDMENY*/
+.main-header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-header nav li {
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.main-header nav li a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f9f3ee;
+  text-decoration: none;
+  color: black;
+  padding: 0 1em 0 1em;
+}
+
+.main-header nav li.current a {
+  background-color: #d8a47f; /* markerad sida */
+  color: #fffaf7;
+}
+
+.main-header nav li a:hover {
+  background-color: #e5bfa6;
+}
+
+.main-header h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.main-header p {
+  text-align: center;
+}
+
+/*STARTSIDA*/
+
+.bildserie {
+ display: grid;
+ grid-template-columns: repeat(3, auto); /*auto så att varje kolumn blir så bred som innehållet kräver*/
+ gap: 1rem; 
+ justify-items: center; 
+ margin: 0 auto;
+ max-width: fit-content; /*gör elementet så smalt som möjligt men tillräckligt brett för att rymma allt inuti*/
+}
+
+.bildserie img {
+height: 300px;
+  width: auto;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+/*BILDREDIGERING*/
+.redigeradebilder {
+  display:flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.redigeradebilder figure {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5rem; /*avståndet mellan bilder*/
+  justify-content: center;
+}
+
+.redigeradebilder figcaption {
+  grid-column: 1/span2;
+  max-width: 400px;
+  
+}
+
+.redigeradebilder img {
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+
+/*OM*/
+.about figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;                /* Avstånd mellan bild och text */
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about img {
+  width: 350px;             
+  height: auto;             /* Bevara proportioner – undvik hoptryckning */
+  border-radius: 16px;
+}
+
+.about figcaption {
+  flex: 1; /*får ta upp så mycket utrymme som möjligt av det som finns kvar i raden*/
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+/*MEDIA QUERY*/
+
+@media(max-width: 900px) {
+  .main-header h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .main-header p {
+    text-align: center;
+  }
+}
+@media(max-width: 767px) {
+body {
+  font-size: 1em;
+  padding-bottom: 80px;
+}
+  .main-header nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+  .main-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .main-header h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .main-header p {
+    text-align: center;
+    font-size: 0.5em;
+  }
+
+  .bildserie {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    
+    
+  }
+
+  .bildserie img {
+   
+   
+  }
+}
