@@ -333,32 +333,10 @@ body {
     
   }
 
-  .redigeradebilder figure img {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-  }
-  .kossan {
-    width: 100%;
-    height: auto;
-    max-width: 330px; 
-    display: block;
-    margin: 0 auto; /* centrerar bilden */
-  }
-
   .redigeradebilder figcaption {
     font-size: 0.9rem;
     text-align: center;
     max-width: 400px;
-  }
-
-  .ko1,
-  .ko2 {
-    width: 100%;
-    height: auto;
-    max-width: 330px;
-    display: block;
-    margin: 0 auto;
   }
  
   h2 {
@@ -374,4 +352,14 @@ body {
   .about img {
     width: 250px;
   }
+  .redigeradebilder img,
+  .bildserie img {
+    height: auto !important;
+    width: 90%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+ 
 }
