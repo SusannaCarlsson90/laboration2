@@ -7,10 +7,12 @@ body {
   font-style: normal;
   font-size: 1.5em;
   line-height: 1.7em;
+  width: auto; 
  }
 
  .container {
   margin: 0 auto;
+  width: 100%;
  }
 
  main {
@@ -206,9 +208,17 @@ height: 500px;
   .main-header {
     background-image: url("../assets/headertabletkomp.webp");
     padding: 2rem 1rem;
+    width: 95%;
     
   }
 
+  .container {
+    width: auto;
+  }
+  .body {
+    width: auto;
+  }
+  
   @supports not (background-image: url("../assets/headertabletkomp.webp")) {
     .main-header {
       background-image: url("../assets/headertabletkomp.jpg");
@@ -230,6 +240,7 @@ height: 500px;
   }
   .bildserie img {
     height: 350px;  
+    width: 90%;
   }
 
   
