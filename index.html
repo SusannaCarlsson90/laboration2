@@ -33,17 +33,66 @@
     </section>
     <section class ="bildserie">
       <picture>
-        <source srcset="assets/kattkomprimerad.webp" type="image/webp">
-      <img src="assets/kattkomprimerad.jpg" class="katten" alt="Katt med korrigerat öga från lila">
-    </picture>
-    <picture>
-      <source srcset="assets/blommakomprimerad.webp" type="image/webp">
-      <img src="assets/blommakomprimerad.jpg" class="blomman" alt="Blomma med redigerade färger">
-    </picture>
-    <picture>
-      <source srcset="assets/kokomprimerad.webp" type="image/webp">
-      <img src="assets/kokomprimerad.jpg" class="kossan" alt="Ko med redigerade färger och borttagna blommor">
-    </picture>
+        <!-- WEBP -->
+        <source
+          type="image/webp"
+          srcset="
+            assets/kattmobil.webp 400w,
+            assets/kattkomprimerad.webp 600w">
+      
+        <!-- JPG -->
+        <img
+          src="assets/kattkomprimerad.jpg"
+          srcset="
+            assets/kattmobil.jpg 400w,
+            assets/kattkomprimerad.jpg 600w"
+          sizes="(max-width: 767px) 90vw,
+                 33vw"
+          class="katten"
+          alt="Katt med korrigerat öga från lila">
+      </picture>
+      
+      <picture>
+        <!-- WEBP -->
+        <source
+          type="image/webp"
+          srcset="
+            assets/blommamobil.webp 400w,
+            assets/blommakomprimerad.webp 600w">
+      
+        <!-- JPG fallback -->
+        <img
+          src="assets/blommakomprimerad.jpg"
+          srcset="
+            assets/blommamobil.jpg 400w,
+            assets/blommakomprimerad.jpg 600w"
+          sizes="(max-width: 767px) 90vw,
+                 33vw"
+          class="blomman"
+          alt="Blomma med redigerade färger">
+      </picture>
+
+      <picture>
+        <!-- WEBP -->
+        <source
+          type="image/webp"
+          srcset="
+            assets/komobil.webp 400w,
+            assets/kokomprimerad.webp 600w">
+      
+        <!-- JPG fallback -->
+        <img
+          src="assets/kokomprimerad.jpg"
+          srcset="
+            assets/komobil.jpg 400w,
+            assets/kokomprimerad.jpg 600w"
+          sizes="(max-width: 767px) 90vw,
+                 33vw"
+          class="kossan"
+          alt="Ko med redigerade färger och borttagna blommor">
+      </picture>
+      
+      
       
     </section>
   </main>
