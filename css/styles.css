@@ -354,14 +354,16 @@ body {
   .about img {
     width: 250px;
   }
+ 
   .redigeradebilder img,
-  .bildserie img {
-    height: auto !important;
-    width: 90%;
-    max-width: 350px;
-    display: block;
-    margin: 0 auto;
-  }
+.bildserie img {
+  height: auto !important;
+  width: 254px;
+  max-width: 254px;
+  display: block;
+  margin: 0 auto;
+}
+
   
  
 }
