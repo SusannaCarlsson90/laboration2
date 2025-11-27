@@ -7,7 +7,7 @@ body {
   font-style: normal;
   font-size: 1.5em;
   line-height: 1.7em;
-  width: auto; 
+  
  }
 
  .container {
@@ -132,8 +132,8 @@ padding: 1em;
 }
 
 .bildserie img {
-height: 500px;
-  width: auto;
+  height: 400px;
+  width: 100%;
   border-radius: 20px;
   display: block;
   object-fit: cover;
@@ -164,8 +164,8 @@ height: 500px;
 
 
 .redigeradebilder img {
-  height: 600px;
-  width: auto;
+  height: 400px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -208,17 +208,10 @@ height: 500px;
   .main-header {
     background-image: url("../assets/headertabletkomp.webp");
     padding: 2rem 1rem;
-    width: 95%;
-    
   }
 
-  .container {
-    width: auto;
-  }
-  .body {
-    width: auto;
-  }
-  
+ 
+
   @supports not (background-image: url("../assets/headertabletkomp.webp")) {
     .main-header {
       background-image: url("../assets/headertabletkomp.jpg");
@@ -273,7 +266,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 95%;
+
     background-color: #f0d8c8;
     white-space: nowrap;
     z-index: 10;
