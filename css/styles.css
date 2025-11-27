@@ -266,6 +266,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 100%;
 
     background-color: #f0d8c8;
     white-space: nowrap;
@@ -349,6 +350,15 @@ body {
     font-size: 0.9rem;
     text-align: center;
     max-width: 400px;
+  }
+
+  .ko1,
+  .ko2 {
+    width: 100%;
+    height: auto;
+    max-width: 330px;
+    display: block;
+    margin: 0 auto;
   }
  
   h2 {
