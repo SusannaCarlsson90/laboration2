@@ -132,6 +132,10 @@ padding: 1em;
   color: #f9f5e8;
 }
 
+.main-header h1, .main-header p {
+  margin-bottom: 3 rem;
+}
+
 /*STARTSIDA*/
 
 .bildserie {
