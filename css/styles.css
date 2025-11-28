@@ -147,6 +147,11 @@ padding: 1em;
  max-width: fit-content; /*gör elementet så smalt som möjligt men tillräckligt brett för att rymma allt inuti*/
 }
 
+.bildserie h3 {
+  grid-column: 1 / -1; /* låter rubriken ta hela raden */
+  text-align: center;
+}
+
 .bildserie img {
   height: 400px;
   width: 100%;

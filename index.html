@@ -33,75 +33,72 @@
       <p>För att redigera mina bilder och skapa logotyp samt favicon har jag använt Photopea. För att skapa webbplatsen har jag använt Visual studio code. Har även använt Google fonts för typsnitt. Publicering av min webbplats gjordes på Netlify och Github Pages.</p>
     </section>
     <section class ="bildserie">
+      <h3>Bildserie</h3>
       <picture>
-        <!-- WEBP -->
         <source
           type="image/webp"
           srcset="
             assets/kattmobil.webp 400w,
-            assets/kattkomprimerad.webp 600w">
+            assets/kattkomprimerad.webp 600w"
+          sizes="(max-width: 767px) 90vw, 33vw">
       
         <!-- JPG -->
         <img
-        loading="lazy"
+          loading="lazy"
           src="assets/kattkomprimerad.jpg"
           srcset="
             assets/kattmobil.jpg 400w,
             assets/kattkomprimerad.jpg 600w"
-          sizes="(max-width: 767px) 90vw,
-                33vw"
+          sizes="(max-width: 767px) 90vw, 33vw"
           class="katten"
           alt="Katt med korrigerat öga från lila">
       </picture>
       
+      
       <picture>
-        <!-- WEBP -->
         <source
           type="image/webp"
           srcset="
             assets/blommamobil.webp 400w,
-            assets/blommakomprimerad.webp 600w">
+            assets/blommakomprimerad.webp 600w"
+          sizes="(max-width: 767px) 90vw, 33vw">
       
-        <!-- JPG fallback -->
         <img
-        loading="lazy"
+          loading="lazy"
           src="assets/blommakomprimerad.jpg"
           srcset="
             assets/blommamobil.jpg 400w,
             assets/blommakomprimerad.jpg 600w"
-            sizes="(max-width: 767px) 90vw,
-            33vw"
+          sizes="(max-width: 767px) 90vw, 33vw"
           class="blomman"
           alt="Blomma med redigerade färger">
       </picture>
+      
 
       <picture>
-        <!-- WEBP -->
         <source
           type="image/webp"
           srcset="
             assets/komobil.webp 400w,
-            assets/kokomprimerad.webp 600w">
+            assets/kokomprimerad.webp 600w"
+          sizes="(max-width: 767px) 90vw, 33vw">
       
-        <!-- JPG fallback -->
         <img
-        loading="lazy"
+          loading="lazy"
           src="assets/kokomprimerad.jpg"
           srcset="
             assets/komobil.jpg 400w,
             assets/kokomprimerad.jpg 600w"
-            sizes="(max-width: 767px) 90vw,
-            33vw"
+          sizes="(max-width: 767px) 90vw, 33vw"
           class="kossan"
           alt="Ko med redigerade färger och borttagna blommor">
       </picture>
       
       
       
+      
     </section>
   </main>
 </div>
-</body>
-</html>
 </body>
 </html>
