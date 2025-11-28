@@ -103,10 +103,21 @@ padding: 1em;
   background-color: #e5bfa6;
 }
 
-.main-header nav {
+/*.main-header nav {
   position: relative;
   margin-top: 3rem;  
   z-index: 3;
+}
+*/
+.main-header nav {
+  position: absolute;
+  bottom: 0;  /* Placera menyn direkt längst ner */
+  left: 0;    /* Placera menyn vid vänstra kanten */
+  width: 100%;  /* Gör menyn lika bred som headern */
+  background-color: #f0d8c8;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
 }
 
 .main-header h1 {
